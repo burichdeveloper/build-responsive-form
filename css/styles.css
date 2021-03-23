@@ -1,2 +1,146 @@
 /* CSS Variables - https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 
+:root {
+    --white: #fff;
+    --darkBlue: #0d1238;
+    --lightBlue: #272f70;
+    --darkGreen: #374d12;
+    --lightGreen: #54761b;
+    --darkGray: #a2adb7;
+    --lightGray: #edeff0;
+}
+
+body {
+    font-family: sans-serif;
+    color: var(--white);
+    background-image: url('../img/oriental-tiles.png');
+}
+
+/* Typography */
+h2 {
+    font-family: serif;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    padding: 0 0.75rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* layout */
+
+section {
+    margin: 5rem 0;
+    padding: 1rem;
+    background-color: rgba(13,18,56, 0.7);
+}
+
+fieldset {
+    background-color: var(--white);
+    border: none;
+    border-radius: 5px;
+    color: var(--darkBlue);
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+fieldset > p {
+    background-color: var(--lightGreen);
+    color: var(--white);
+    text-align: center;
+    padding: 0.75rem; 
+}
+
+fieldset > div {
+    padding: 0.75rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-container > div {
+    flex: 0 1 50%;
+    margin-bottom: 0.75rem;
+}
+
+fieldset > div > label,
+fieldset > div > input {
+    display: block;
+    width: 100%;
+}
+
+fieldset > div > input {
+    border: 1px solid var(--darkGray);
+    background-color: var(--lightGray);
+    border-radius: 5px;
+    line-height: 2.5rem;
+    padding-left: 0.5rem;
+}
+
+fieldset > div > input[type=submit] {
+    background-color: var(--lightBlue);
+    color: var(--white);
+}
+
+fieldset > div > input[type=submit]:hover {
+    cursor: pointer;
+    background-color: var(--darkBlue);
+}
+
+fieldset a {
+    color: var(--lightGreen);
+    text-decoration: none;
+}
+
+fieldset a:hover {
+    color: var(--darkGreen);
+}
+
+.disclaimer {
+    display: flex;
+    justify-content: start;
+}
+
+.disclaimer label,
+.disclaimer input {
+    width: auto;
+}
+
+.disclaimer label {
+    margin-right: 1rem;
+}
+
+@media only screen and (min-width:1000px){
+    section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    form {
+        flex: 0 0 40.625rem;
+    }
+
+    section > div {
+        flex: 0 1 50%;
+        margin-right: 4%;
+    }
+}
+
+@media only screen and (min-width:1440px) {
+    section {
+        width: 88rem;
+        margin: 5rem auto;
+    }
+}
+
+
+/* form max width 650px  */
+/* 1000 first break point */
+/* 1440 second break point */
